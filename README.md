@@ -27,7 +27,7 @@ When the AJAX call is made, posting to the api/friends URL, the apiRoutes.js tak
 Once it finds the best match the result is sent back as a response to the front-end through the AJAX call. The front-end, then takes those values and displays them to the end user through a modal.
 
 ### The API Friends List
-The API friends List is a file that can be accessed from the server and displayed through a link. It is a repository of survey results in JSON format. The survey results are a mock up. Since we do not have a database to send and store survey results to, these survey reults stand as a source of candidates for the server to perform its search for the best match. It also serves as a temporary repository to store the last data set of survey results pushed in by the api router. After submitting a survey, along with the mock data your survey result will appear in your list of survey results. once the session is reset, it will disappear. 
+The API friends List is a file that can be accessed from the server and displayed through a link. It is a repository of survey results in JSON format. The survey results are a mock up. Since we do not have a database to send and store survey results to, these survey reults stand as a source of candidates for the server to perform its search for the best match. It also serves as a temporary repository to store the last data set of survey results pushed in by the api router. After submitting a survey, along with the mock data your survey result will appear in your list of survey results. These results will persist for the session and disappear thereafter.
 
 
 
