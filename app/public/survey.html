@@ -220,10 +220,11 @@
                         empty = true;
                 });
 
+                return empty;
             }
 
 
-            if (empty = false) {
+            if (noEmpties() == false) {
                 //Pull all answers into an object & create an object for the user's data
                 var surveyResults = {
                     name: $("#name").val(),
@@ -254,6 +255,9 @@
                     $("#resultsModal").modal('toggle');
 
                 });
+            }
+            else {
+                alert("Every question must be answered!");
             }
         });
     </script>
