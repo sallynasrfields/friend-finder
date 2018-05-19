@@ -1,33 +1,37 @@
 # friend-finder
-An express based website used to help people find friends with similar interests.
+An express based website used to link friends with other friends of similar nature.
 
-## How it works.
+## How to use this app.
+1. NPM Install
+2. NPM Start
+3. navigate to localhost:8080 in web browser
+4. Click on survey
+5. Answer all questions
+6. The name and picture of your **Best Match** will be displayed after clicking "Submit"
 
-To use this website, the user must first fill out a survey of 10 questions. Once all of the questions are answered, the user must submit the survey. Results are sent to back-end server and are compared with the results of all other submissions. A best match is calculated, then returned back to the user in the form of a "Pop-up" message. For more information - user can also view survey results of all previous submission by navigating to the link "API Friends List" at the bottom of the survey page.
 
 
 ## How it was built.
 
-This is an example of a full stack application that uses AJAX, Express and JSON to post data to server, process the data and display results back to the end user. The main components of this application is 1) a server (server.js) 2) two javascript files for routings (apiRoutings & htmlRoutings) 3) a javascript file to house the survey results in JSON (friends.js) 4) and two HTML files (home.html & survey.html).
+This is an example of a full stack application that uses the Express npm package to perform AJAX calls to a local server, processing JSON, URLs, and Text through the body-parser npm package, with routes fetching HTML documents through the usage of the Path npm package. The main components of this application are 
+1. a server (server.js) that listens for AJAX calls. This server:
+* requires Express npm package
+* requires body parsar npm package
+* requires a htmlroutes.js files
+* requires a apiroutes.js file
 
-### The Front End
+2. An htmlRoutes.js file that:
+* requires path npm package
+* makes an AJAX "get" call (enabled by express) for the server to get home.html when based on speficied url
+* makes an AJAX "get" call (enabled by express) for the server to get survey.html when survey button is clicked
 
-The end-user graphical interface was created through the usage of html & bootstrap. To start with the user is introduced to the application through the home page. A button is placed on the home page that nagivates the user to the survey.
+3. A Survey.html page that:
+* makes an AJAX call to post survey results to a location on the server, /api/friends, receives the best match from an AJAX POST function in the file apiRoutes.js, then displays the name and picture of the best match.
 
-### The Ajax call
-Logic on this page was programmed so that once the user finishes the survey and submits the responses, Jquery validates for a complete set of data, then captures the user's response then finally posts the data to the URL "api/friends" though an AJAX call.
-### The Server
-Meanwhile, the server sits still listening. It has visibility of its two routers, api & html, each desginated to their particular URL paths. The API's watch for activitivy on their URLS and are programmed to run a series of commands specific to each URL.
-
-### The Routings
-The api router waits for a post the the URL api/friends
-When the AJAX call is made, posting to the api/friends URL, the apiRoutes.js takes the survey results and goes through a series of calculations to find the best match. Then pushes it to an array of objects that house survey results. 
-
-### The Modal
-Once it finds the best match the result is sent back as a response to the front-end through the AJAX call. The front-end, then takes those values and displays them to the end user through a modal.
-
-### The API Friends List
-The API friends List is a file that can be accessed from the server and displayed through a link. It is a repository of survey results in JSON format. The survey results are a mock up. Since we do not have a database to send and store survey results to, these survey reults stand as a source of candidates for the server to perform its search for the best match. It also serves as a temporary repository to store the last data set of survey results pushed in by the api router. After submitting a survey, along with the mock data your survey result will appear in your list of survey results. These results will persist for the session and disappear thereafter.
+4. An apiRoutes.js file that:
+* requires data/friends.js and assigns content to local variant, friendsData.
+* makes an AJAX "get" call for the server to get friendsData when user navaigates to /api/friends.
+* makes an AJAX "post call that first stores the surveyResults received in a local variable, then identifies the best match, sends it back to the caller, then finally adds the new set of friend data to the local variant, friendsData.
 
 
 
