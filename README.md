@@ -35,6 +35,6 @@ This is an example of a full stack application that uses the "express" npm packa
 4. And finally, an apiRoutes.js file that:
 * requires data/friends.js and assigns content to local variant, friendsData,
 * makes an AJAX "get" call (enabled by express) for the server to get friendsData when user navaigates to "/api/friends",
-* makes an AJAX "post" call (enabled by express) that first stores the surveyResults received in a local variable, then identifies the best match, sends it back to the caller, then finally adds the new set of friend data to the local variant, friendsData.
+* makes an AJAX "post" call (enabled by express) that first stores the surveyResults received in a local variable, then identifies the best match, sends it back to the caller, then finally adds the new set of surveyResults to the local variant, friendsData.
 
 
