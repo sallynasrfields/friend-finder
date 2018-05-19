@@ -9,7 +9,7 @@ An express based website used to link friends with other friends of similar natu
 5. Answer all questions.
 6. The name and picture of your **Best Match** will be displayed after clicking "Submit".
 7. View database of survey results by clicking api/friends link.
-7. Once done with app, you can stop the server using the command, "ctrl-c".
+7. Once done with app, you can stop the server by enterig the command, "ctrl-c", into the terminal.
 
 
 
