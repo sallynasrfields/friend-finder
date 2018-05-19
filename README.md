@@ -3,7 +3,7 @@ An express based website used to link friends with other friends of similar natu
 
 ## How to Use This App.
 1. Enter "npm Install" into terminal to install all required npm packages locally.
-2. Enter "npm start" into terminal to start the server. A message logged to display will notify you that you're server is "listening".
+2. Enter "npm start" into terminal to start the server. A message logged to the console will notify you that your server is "listening".
 3. Navigate to localhost:8080 in web browser.
 4. Click on "Survey".
 5. Answer all questions.
