@@ -15,7 +15,7 @@ An express based website used to link friends with other friends of similar natu
 
 ## How it Works
 
-...This is an example of a full stack application that uses the Express npm package to perform AJAX calls to a local server, processing JSON, URLs, and text through the body-parser npm package, with routes fetching HTML documents through the usage of the Path npm package. The main components of this application are: 
+This is an example of a full stack application that uses the Express npm package to perform AJAX calls to a local server, processing JSON, URLs, and text through the body-parser npm package, with routes fetching HTML documents through the usage of the Path npm package. The main components of this application are: 
 1. A server.js that listens for AJAX calls. This server:
 * requires "express" npm package,
 * requires "body-parsar" npm package,
