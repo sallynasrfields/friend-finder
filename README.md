@@ -5,11 +5,11 @@ An express based website used to link friends with other friends of similar natu
 1. Enter "npm Install" into terminal.
 2. Enter "npm start" into terminal.
 3. Navigate to localhost:8080 in web browser.
-4. Click on survey.
+4. Click on "Survey".
 5. Answer all questions.
 6. The name and picture of your **Best Match** will be displayed after clicking "Submit".
 7. View database of survey results by clicking api/friends link.
-7. Once done with app, you can stop the server, "ctrl-c"
+7. Once done with app, you can stop the server using the command, "ctrl-c".
 
 
 
