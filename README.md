@@ -30,7 +30,7 @@ This is an example of a full stack application that uses the "express" npm packa
 3. A survey.html page that has an "on click" function that:
 * performs a data validation to make sure that all questions were answered,
 * stores the survey results in a local variant, surveyResults,
-* makes a call to an AJAX post function in apiRoutes.js. This call sends the surveyResults to the AJAX post, captures the name and picture of the best match (see below) in local variants, then displays the name and picture in a modal.
+* makes a call to an AJAX post function in apiRoutes.js. This call sends the surveyResults to the AJAX post, receives & captures the name and picture of the best match (see below) in local variants, then finally displays the name and picture in a modal.
 
 4. And finally, an apiRoutes.js file that:
 * requires data/friends.js and assigns content to local variant, friendsData,
